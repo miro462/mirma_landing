@@ -1,67 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>mirma.wav - Tu Estudio de Música</title>
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts - Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for social icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="ruta/a/tu/favicon.png" type="image/png" />
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #1a1a1a; /* Dark background */
-            color: #f0f0f0; /* Light text */
-            overflow-x: hidden; /* Prevent horizontal scrolling */
-        }
-        .animate-fade-in {
-            animation: fadeIn 1s ease-out forwards;
-        }
-        .animate-slide-up {
-            animation: slideUp 0.8s ease-out forwards;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        /* Delay animations for sequential appearance */
-        .animate-slide-up:nth-child(1) { animation-delay: 0.2s; }
-        .animate-slide-up:nth-child(2) { animation-delay: 0.4s; }
-        .animate-slide-up:nth-child(3) { animation-delay: 0.6s; }
-        .animate-slide-up:nth-child(4) { animation-delay: 0.8s; }
-        .animate-slide-up:nth-child(5) { animation-delay: 1.0s; }
-
-        /* Custom scrollbar for a cleaner look */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #2a2a2a;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #4a4a4a;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #5a5a5a;
+            background-color: #1a1a1a;
+            /* Dark background */
+            color: #f0f0f0;
+            /* Light text */
+            overflow-x: hidden;
+            /* Prevent horizontal scrolling */
         }
 
-        /* Hero section background image */
         .hero-background {
-            background-image: url('images/banner.jpg');
+            background-image: url('images/banner.webp');
             background-size: cover;
             background-position: center;
-            position: relative; /* Needed for overlay */
+            position: relative;
+            /* Needed for overlay */
         }
+
         .hero-background::before {
             content: '';
             position: absolute;
@@ -69,98 +44,119 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.6); /* Dark overlay for text readability */
+            background: rgba(0, 0, 0, 0.6);
+            /* Dark overlay */
             z-index: 1;
         }
+
         .hero-content {
             position: relative;
-            z-index: 2; /* Ensure content is above overlay */
+            z-index: 2;
+            /* Above overlay */
         }
     </style>
 </head>
+
 <body class="min-h-screen flex flex-col">
 
-    <!-- Header -->
-    <header class="bg-black bg-opacity-50 backdrop-blur-sm p-4 md:p-6 flex justify-between items-center fixed top-0 left-0 w-full z-50 shadow-lg rounded-b-lg">
+    <header
+        class="bg-black bg-opacity-50 backdrop-blur-sm p-4 md:p-6 flex justify-between items-center fixed top-0 left-0 w-full z-50 shadow-lg rounded-b-lg">
         <div class="text-2xl md:text-3xl font-bold text-white tracking-wider rounded-lg p-2">
             mirma.<span class="text-indigo-400">wav</span>
         </div>
-        <a href="https://studio.mirma.me" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 md:py-3 md:px-6 rounded-full shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+        <a href="https://studio.mirma.me"
+            class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 md:py-3 md:px-6 rounded-full shadow-md transition duration-300 ease-in-out transform hover:scale-105">
             Iniciar Sesión
         </a>
     </header>
 
-    <!-- Hero Section with Banner Background -->
-    <!-- Increased mt-24 to provide more space below the fixed header -->
     <main class="flex-grow flex items-center justify-center text-center p-4 md:p-8 mt-24 hero-background">
-        <section class="max-w-4xl w-full mx-auto py-16 md:py-24 animate-fade-in hero-content">
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 text-white animate-slide-up">
+        <section class="max-w-4xl w-full mx-auto py-16 md:py-24 hero-content">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 text-white">
                 Tu Sonido, Nuestra Pasión.
             </h1>
-            <p class="text-lg md:text-xl text-gray-300 mb-10 animate-slide-up" style="animation-delay: 0.3s;">
-                En mirma.wav, transformamos tus ideas musicales en obras maestras. Grabación, mezcla, masterización y producción a tu alcance.
+            <p class="text-lg md:text-xl text-gray-300 mb-10">
+                En mirma.wav, transformamos tus ideas musicales en obras maestras. Grabación, mezcla, masterización y
+                producción a tu alcance.
             </p>
-            <a href="#studio-photos" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 animate-slide-up" style="animation-delay: 0.6s;">
+            <a href="#studio-photos"
+                class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
                 Explorar Estudio
             </a>
         </section>
     </main>
 
-    <!-- Studio Photos Section -->
     <section id="studio-photos" class="py-16 md:py-24 bg-gray-900 rounded-t-xl shadow-inner">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 text-white animate-fade-in">
-                Nuestro Espacio Creativo
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in">
-                <div class="rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out group">
-                    <!-- Image 1 with descriptive alt text -->
-                    <img src="images/image1.jpg" alt="Equipo de audio profesional en el estudio mirma.wav" class="w-full h-64 md:h-96 object-cover object-center group-hover:opacity-80 transition-opacity duration-300">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 text-white">Nuestro Espacio Creativo</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div
+                    class="rounded-xl overflow-hidden shadow-2xl group hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="images/imagen1.webp" alt="Equipo de audio profesional en el estudio mirma.wav"
+                        class="w-full h-64 md:h-96 object-cover object-center group-hover:opacity-80 transition-opacity duration-300"
+                        loading="lazy" width="800" height="600" />
                     <div class="p-6 bg-gray-800 rounded-b-xl">
                         <h3 class="text-xl font-semibold text-white mb-2">Ambiente Inspirador</h3>
-                        <p class="text-gray-400">Diseñado para la creatividad, con acústica optimizada y equipos de última generación.</p>
+                        <p class="text-gray-400">Diseñado para la creatividad, con acústica optimizada y equipos de
+                            última generación.</p>
                     </div>
                 </div>
-                <div class="rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out group">
-                    <!-- Image 2 with descriptive alt text -->
-                    <img src="images/image2.jpg" alt="Estudio de música con iluminación ambiental en mirma.wav" class="w-full h-64 md:h-96 object-cover object-center group-hover:opacity-80 transition-opacity duration-300">
+                <div
+                    class="rounded-xl overflow-hidden shadow-2xl group hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="images/imagen2.webp" alt="Estudio de música con iluminación ambiental en mirma.wav"
+                        class="w-full h-64 md:h-96 object-cover object-center group-hover:opacity-80 transition-opacity duration-300"
+                        loading="lazy" width="800" height="600" />
                     <div class="p-6 bg-gray-800 rounded-b-xl">
                         <h3 class="text-xl font-semibold text-white mb-2">Equipamiento Profesional</h3>
-                        <p class="text-gray-400">Desde micrófonos vintage hasta interfaces de audio de alta fidelidad.</p>
+                        <p class="text-gray-400">Desde micrófonos vintage hasta interfaces de audio de alta fidelidad.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action Section -->
     <section class="py-16 md:py-24 text-center bg-gradient-to-r from-indigo-700 to-purple-800 rounded-b-xl shadow-lg">
-        <h2 class="text-3xl md:text-5xl font-bold text-white mb-8 animate-fade-in">
-            ¿Listo para crear?
-        </h2>
-        <p class="text-lg md:text-xl text-indigo-100 mb-10 max-w-2xl mx-auto animate-fade-in">
+        <h2 class="text-3xl md:text-5xl font-bold text-white mb-8">¿Listo para crear?</h2>
+        <p class="text-lg md:text-xl text-indigo-100 mb-10 max-w-2xl mx-auto">
             Únete a la comunidad de artistas que ya están llevando su música al siguiente nivel con mirma.wav.
         </p>
-        <a href="https://studio.mirma.me" class="inline-block bg-white text-indigo-800 font-bold py-3 px-8 rounded-full shadow-xl transition duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-200 animate-fade-in">
+        <a href="https://studio.mirma.me"
+            class="inline-block bg-white text-indigo-800 font-bold py-3 px-8 rounded-full shadow-xl transition duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-200">
             Acceder al Estudio
         </a>
     </section>
 
-    <!-- Footer with Social Links -->
     <footer class="bg-black p-6 md:p-8 text-center rounded-t-lg">
         <div class="flex justify-center space-x-6 mb-6">
-            <a href="https://instagram.com/mirma.wav" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300 transform hover:scale-125">
+            <a href="https://instagram.com/mirma.wav" target="_blank" rel="noopener noreferrer"
+                class="text-gray-400 hover:text-white transition transform hover:scale-125">
                 <i class="fab fa-instagram text-3xl"></i>
             </a>
-            <a href="https://tiktok.com/mirma.wav" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300 transform hover:scale-125">
+            <a href="https://tiktok.com/mirma.wav" target="_blank" rel="noopener noreferrer"
+                class="text-gray-400 hover:text-white transition transform hover:scale-125">
                 <i class="fab fa-tiktok text-3xl"></i>
             </a>
-            <a href="https://www.youtube.com/channel/UCq2WU876Rj2T3O-2s3CARrA" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300 transform hover:scale-125">
+            <a href="https://www.youtube.com/channel/UCq2WU876Rj2T3O-2s3CARrA" target="_blank" rel="noopener noreferrer"
+                class="text-gray-400 hover:text-white transition transform hover:scale-125">
                 <i class="fab fa-youtube text-3xl"></i>
             </a>
         </div>
         <p class="text-gray-500 text-sm md:text-base">&copy; 2025 mirma.wav. Todos los derechos reservados.</p>
     </footer>
-
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner"
+        class="fixed bottom-0 left-0 w-full bg-gray-800 text-white p-4 md:p-6 flex flex-col md:flex-row items-center justify-between shadow-lg z-50 rounded-t-lg hidden">
+        <p class="text-sm md:text-base text-center md:text-left mb-4 md:mb-0 md:mr-4">
+            Utilizamos cookies para mejorar tu experiencia en nuestro sitio web. Al continuar navegando, aceptas nuestra
+            <a href="#" class="text-indigo-400 hover:underline">política de cookies</a>.
+        </p>
+        <button id="accept-cookies"
+            class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-full shadow-md transition duration-300 ease-in-out transform hover:scale-105 w-full md:w-auto">
+            Aceptar
+        </button>
+        <script src="js/cookies.js" defer></script>
+    </div>
 </body>
+
 </html>
