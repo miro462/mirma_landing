@@ -138,11 +138,11 @@ main {
   border-radius: calc(var(--radius) * 1.25);
   background-image: linear-gradient(
       to top,
-      rgba(0, 0, 0, 0.78) 0%,
-      rgba(0, 0, 0, 0.45) 55%,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0.35) 55%,
       rgba(0, 0, 0, 0.25) 100%
     ),
-    url('../images/imagen1.webp');
+    url('../images/banner.webp');
   background-size: cover;
   background-position: center calc(45% + var(--hero-parallax));
   background-attachment: fixed;
@@ -192,6 +192,14 @@ main {
   box-shadow: 0 25px 40px rgba(0, 0, 0, 0.35);
 }
 
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
 .hero__content h1 {
   font-size: clamp(2.2rem, 5vw, 3.5rem);
   margin-bottom: 1rem;
@@ -206,6 +214,7 @@ main {
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.75rem;
 }
 
@@ -282,15 +291,28 @@ main {
   color: #f5f5f5;
   position: relative;
   z-index: 6;
+  isolation: isolate;
 }
 
 .banner-image::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(125deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.3));
+  background: linear-gradient(145deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
   border-radius: inherit;
   z-index: 0;
+}
+
+.banner-image::after {
+  content: '';
+  position: absolute;
+  inset: -30%;
+  background: radial-gradient(circle at 20% 30%, rgba(138, 180, 248, 0.35), transparent 55%),
+    radial-gradient(circle at 80% 70%, rgba(156, 101, 255, 0.35), transparent 50%);
+  filter: blur(45px);
+  opacity: 0.7;
+  animation: bannerGlow 16s ease-in-out infinite alternate;
+  z-index: -1;
 }
 
 .banner-image > * {
@@ -600,6 +622,15 @@ main {
 
   main {
     padding-top: 1rem;
+  }
+}
+
+@keyframes bannerGlow {
+  0% {
+    transform: translate3d(-5%, -5%, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(5%, 5%, 0) scale(1.05);
   }
 }
 
