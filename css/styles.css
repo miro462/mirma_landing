@@ -303,6 +303,29 @@ main {
   z-index: 0;
 }
 
+.banner-image {
+  width: 100%;
+  height: clamp(220px, 32vw, 320px);
+  background-image: url('images/banner.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #050505;
+  margin: 0 auto 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  overflow: hidden;
+  max-width: var(--max-width);
+  padding: 0 1.5rem;
+  position: relative;
+  isolation: isolate;
+  border: 1.5px solid var(--border);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
 .banner-image::after {
   content: '';
   position: absolute;
