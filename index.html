@@ -8,7 +8,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
@@ -25,29 +28,28 @@
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
+      <a class="btn primary header-cta" href="https://studio.mirma.me" target="_blank" rel="noreferrer">Acceso estudio</a>
     </header>
+
+    <section class="banner-image" aria-label="Servicios principales destacados">
+      <h2>Grabación · Beatmaking · Mezcla · Mastering · Revisiones</h2>
+      <a class="btn primary banner-cta" href="https://studio.mirma.me" target="_blank" rel="noreferrer">Entrar al estudio</a>
+    </section>
 
     <main>
       <section class="hero">
         <div class="hero__content">
           <h1>Tu sonido merece un lugar especial</h1>
           <p>Especializados en grabación vocal, creación de beats y mezcla y masterización profesional.</p>
+          <div class="hero__actions">
+            <button class="btn primary" onclick="location.href='https://studio.mirma.me'">Entrar al estudio</button>
+            <a class="btn secondary" href="#servicios">Ver servicios</a>
+          </div>
         </div>
 
         <div class="hero__card">
           <h2>Agenda abierta</h2>
-          <ul>
-            <li>Beatmaking personalizado desde cero</li>
-            <li>Mezcla y mastering online con feedback guiado</li>
-            <li>Entrega lista para streaming y vinilo</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- BANNER PRINCIPAL -->
-      <section class="banner-image">
-        <div class="banner-overlay">
-          <h2>Grabación de voces · Beatmaking · Mezcla · Masterización</h2>
+          <p class="hero-services">Grabación · Beatmaking · Mezcla · Mastering · Revisiones</p>
         </div>
       </section>
 
@@ -71,12 +73,17 @@
 
           <article class="card">
             <h3>Masterización</h3>
-            <p>Loudness transparente y optimización para streaming, vinilo y video.</p>
+            <p>Loudness transparente y optimización para streaming y video.</p>
           </article>
 
           <article class="card">
             <h3>Producción</h3>
             <p>Beatmaking, arreglos, dirección artística y soporte creativo integral.</p>
+          </article>
+
+          <article class="card">
+            <h3>Revisiones de mezcla</h3>
+            <p>Notas detalladas, compare A/B y seguimiento para optimizar tus versiones finales.</p>
           </article>
         </div>
       </section>
@@ -122,6 +129,8 @@
         <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
       </div>
     </footer>
+
+    <a class="floating-cta" href="https://instagram.com/mirma.wav" target="_blank" rel="noreferrer">🎤 Reservar sesión</a>
 
     <div id="cookie-banner" class="cookie-banner hidden">
       <p>Usamos cookies esenciales para mejorar tu experiencia. Consulta nuestra <a href="#">política.</a></p>
