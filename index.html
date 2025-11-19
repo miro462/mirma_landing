@@ -4,17 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>mirma.wav · Estudio de Música</title>
-    <meta name="description" content="Estudio de grabación mirma.wav. Producción, mezcla y masterización profesional." />
+    <meta name="description" content="Estudio de grabación profesional. Grabación de voces, beatmaking, mezcla y masterización." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-bxVdqQhe0rdqYp8D1mqNS23W9xg1abA5pjx1r3Sg0RVPYzUKGwEuITdSb9VjA36TObgGJE0E7E5c8m4z7WZ0jQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="icon" href="images/favicon.png" type="image/png" />
   </head>
+
   <body>
     <header class="site-header">
       <div class="brand">mirma<span>.wav</span></div>
@@ -27,28 +30,32 @@
         </ul>
         <a class="nav-cta" href="https://studio.mirma.me" target="_blank" rel="noreferrer">Acceso estudio</a>
       </nav>
+      <a class="btn primary header-cta" href="https://studio.mirma.me" target="_blank" rel="noreferrer">Acceso estudio</a>
     </header>
+
+    <section class="banner-image" aria-label="Servicios principales destacados">
+      <h2>Grabación · Beatmaking · Mezcla · Mastering · Revisiones</h2>
+      <a class="btn primary banner-cta" href="https://studio.mirma.me" target="_blank" rel="noreferrer">Entrar al estudio</a>
+    </section>
 
     <main>
       <section class="hero">
         <div class="hero__content">
           <h1>Tu sonido merece un lugar especial</h1>
-          <p>
-            Especializados en grabación vocal, creación de beats y mezcla y masterización profesional.
-          </p>
+          <p>Especializados en grabación vocal, creación de beats y mezcla y masterización profesional.</p>
+          <div class="hero__actions">
+            <button class="btn primary" onclick="location.href='https://studio.mirma.me'">Entrar al estudio</button>
+            <a class="btn secondary" href="#servicios">Ver servicios</a>
+          </div>
         </div>
+
         <div class="hero__card">
           <h2>Agenda abierta</h2>
-          <ul class="hero__services">
-            <li>Grabación</li>
-            <li>Beatmaking</li>
-            <li>Mezcla</li>
-            <li>Mastering</li>
-            <li>Revisiones</li>
+          <ul>
+            <li>Beatmaking personalizado desde cero</li>
+            <li>Mezcla y mastering online con feedback guiado</li>
+            <li>Entrega lista para streaming y vinilo</li>
           </ul>
-          <div class="hero__actions">
-            <a class="btn primary" href="https://studio.mirma.me" target="_blank" rel="noreferrer">Entrar al estudio</a>
-          </div>
         </div>
       </section>
 
@@ -58,115 +65,66 @@
         </div>
       </section>
 
+      <!-- SERVICIOS -->
       <section id="servicios" class="section">
         <div class="section__heading">
           <p class="eyebrow">Servicios clave</p>
           <h2>Todo lo que necesitas para publicar con confianza</h2>
         </div>
+
         <div class="grid cards">
           <article class="card">
             <h3>Grabación</h3>
-            <p>Cabina tratada, micrófonos premium y un flujo dirigido para capturar voces con carácter y nitidez.</p>
+            <p>Cabina tratada acústicamente, micrófonos profesionales y monitoreo preciso.</p>
           </article>
-          <article class="card">
-            <h3>Beatmaking</h3>
-            <p>Creación de instrumentales a medida, selección de texturas y arreglos rítmicos según tu visión.</p>
-          </article>
+
           <article class="card">
             <h3>Mezcla</h3>
-            <p>Procesamiento híbrido, automatizaciones precisas y stems organizados para cualquier formato.</p>
+            <p>Procesamiento híbrido, automatizaciones detalladas y entrega en stems en cualquier formato.</p>
           </article>
+
           <article class="card">
-            <h3>Mastering</h3>
-            <p>Entrega final optimizada para plataformas digitales y video, con loudness controlado y traducción fiel.</p>
+            <h3>Masterización</h3>
+            <p>Loudness transparente y optimización para streaming y video.</p>
           </article>
+
           <article class="card">
-            <h3>Revisiones</h3>
-            <p>Feedback detallado sobre tus mezclas con guías accionables para llegar al resultado deseado.</p>
+            <h3>Producción</h3>
+            <p>Beatmaking, arreglos, dirección artística y soporte creativo integral.</p>
+          </article>
+
+          <article class="card">
+            <h3>Revisiones de mezcla</h3>
+            <p>Notas detalladas, compare A/B y seguimiento para optimizar tus versiones finales.</p>
           </article>
         </div>
       </section>
 
+      <!-- ESTUDIO -->
       <section id="estudio" class="section studio">
         <div class="section__heading">
           <p class="eyebrow">Nuestro espacio</p>
           <h2>Diseñado para escucharte</h2>
-          <p>Iluminación cálida, control acústico y herramientas listas para cualquier género.</p>
         </div>
+
         <div class="grid gallery">
           <figure>
-            <img src="images/imagen1.webp" alt="Equipo de audio en el estudio mirma.wav" width="800" height="600" loading="lazy" />
+            <img src="images/imagen1.webp" alt="Equipo de audio" />
             <figcaption>Zona de mezcla con monitores de referencia y racks analógicos.</figcaption>
           </figure>
+
           <figure>
-            <img src="images/imagen2.webp" alt="Cabina de grabación iluminada" width="800" height="600" loading="lazy" />
+            <img src="images/imagen2.webp" alt="Cabina de grabación" />
             <figcaption>Cabina tratada para capturar voces e instrumentos con detalle.</figcaption>
           </figure>
         </div>
       </section>
 
-      <section id="trabajos" class="section works">
-        <div class="section__heading">
-          <p class="eyebrow">Portafolio en vivo</p>
-          <h2>Últimos videos y canciones</h2>
-          <p>
-            Un vistazo rápido a nuestro canal de YouTube con sesiones recientes, instrumentales y masters terminados. Mira el catálogo
-            completo en <a href="https://www.youtube.com/@mirma_wav" target="_blank" rel="noreferrer">youtube.com/@mirma_wav</a>.
-          </p>
-        </div>
-        <div class="video-grid" role="list">
-          <article class="video-card" role="listitem">
-            <div class="video-frame">
-              <iframe
-                src="https://www.youtube.com/embed?listType=user_uploads&amp;list=mirma_wav&amp;index=0"
-                title="Último lanzamiento en el canal de mirma.wav"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
-            </div>
-            <div class="video-card__meta">
-              <p class="video-card__title">Sesiones y beats en estreno</p>
-              <a class="video-card__cta" href="https://www.youtube.com/@mirma_wav" target="_blank" rel="noreferrer">Ver en YouTube</a>
-            </div>
-          </article>
-          <article class="video-card" role="listitem">
-            <div class="video-frame">
-              <iframe
-                src="https://www.youtube.com/embed?listType=user_uploads&amp;list=mirma_wav&amp;index=1"
-                title="Video destacado del canal mirma.wav"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
-            </div>
-            <div class="video-card__meta">
-              <p class="video-card__title">Procesos de mezcla y mastering</p>
-              <a class="video-card__cta" href="https://www.youtube.com/@mirma_wav" target="_blank" rel="noreferrer">Reproducir ahora</a>
-            </div>
-          </article>
-          <article class="video-card" role="listitem">
-            <div class="video-frame">
-              <iframe
-                src="https://www.youtube.com/embed?listType=user_uploads&amp;list=mirma_wav&amp;index=2"
-                title="Trabajos recientes publicados por mirma.wav"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
-            </div>
-            <div class="video-card__meta">
-              <p class="video-card__title">Highlights de producción vocal</p>
-              <a class="video-card__cta" href="https://www.youtube.com/@mirma_wav" target="_blank" rel="noreferrer">Abrir playlist</a>
-            </div>
-          </article>
-        </div>
-      </section>
-
+      <!-- CONTACTO -->
       <section id="contacto" class="section contact">
         <div class="contact__card">
           <h2>¿Listo para compartir tu música?</h2>
-          <p>Escríbenos para agendar una sesión presencial u online. Respondemos en menos de 24 horas.</p>
+          <p>Escríbenos para agendar una sesión. Respuesta en menos de 24 horas.</p>
           <div class="contact__actions">
             <a class="btn ghost" href="https://instagram.com/mirma.wav" target="_blank" rel="noreferrer">Hablar por Instagram</a>
           </div>
@@ -178,19 +136,16 @@
       <div class="brand">mirma<span>.wav</span></div>
       <p>Estudio boutique · Sesiones globales · &copy; 2025</p>
       <div class="socials">
-        <a href="https://instagram.com/mirma.wav" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@mirma.wav?_t=ZN-8xhSPIpDM3y&_r=1" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        <a href="https://www.youtube.com/@mirma_wav" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://instagram.com/mirma.wav"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@mirma.wav"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
       </div>
     </footer>
 
-    <a class="floating-cta" href="https://instagram.com/mirma.wav" target="_blank" rel="noreferrer">DM en Instagram</a>
+    <a class="floating-cta" href="https://instagram.com/mirma.wav" target="_blank" rel="noreferrer">🎤 Reservar sesión</a>
 
-    <div id="cookie-banner" class="cookie-banner hidden" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
-      <p>
-        Usamos cookies esenciales para mejorar tu experiencia. Al aceptar, continuas navegando con normalidad. Consulta nuestra
-        <a href="#">política</a>.
-      </p>
+    <div id="cookie-banner" class="cookie-banner hidden">
+      <p>Usamos cookies esenciales para mejorar tu experiencia. Consulta nuestra <a href="#">política.</a></p>
       <button id="accept-cookies" class="btn secondary">Aceptar</button>
     </div>
 
