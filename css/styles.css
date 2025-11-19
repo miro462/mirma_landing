@@ -96,22 +96,29 @@ main {
   flex: 1;
 }
 
+.site-header nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
 .site-header nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   padding: 0;
   margin: 0;
 }
 
-.site-header nav a {
+.site-header nav a:not(.nav-cta) {
   text-decoration: none;
   font-weight: 600;
   color: var(--muted);
   transition: color 0.2s ease;
 }
 
-.site-header nav a:hover {
+.site-header nav a:not(.nav-cta):hover {
   color: var(--accent);
 }
 
@@ -129,8 +136,8 @@ main {
 .hero {
   --hero-parallax: 0px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.75rem;
   align-items: stretch;
   max-width: var(--max-width);
   margin: 1.5rem auto 3.5rem;
@@ -216,6 +223,8 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.75rem;
+  justify-content: flex-start;
+  margin-top: 1rem;
 }
 
 .hero__actions .btn {
@@ -389,6 +398,61 @@ main {
   letter-spacing: 0.05em;
 }
 
+.banner-image {
+  width: 100%;
+  height: clamp(220px, 30vw, 320px);
+  background-image: url('images/banner.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #050505;
+  margin: 0 auto 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  overflow: hidden;
+  max-width: var(--max-width);
+  padding: 0 1.5rem;
+  position: relative;
+  isolation: isolate;
+  border: 1.5px solid var(--border);
+  box-shadow: var(--card-shadow);
+  z-index: 1;
+}
+
+.banner-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.15));
+  pointer-events: none;
+  z-index: 0;
+}
+
+.banner-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: inherit;
+  position: relative;
+  z-index: 1;
+  padding: 0 1rem;
+}
+
+.banner-image h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 0 1rem;
+}
+
 .section__heading {
   max-width: 720px;
   margin-bottom: 2rem;
@@ -448,6 +512,74 @@ main {
   margin-top: 0.75rem;
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.works {
+  background: rgba(7, 7, 7, 0.85);
+  border-radius: var(--radius);
+  border: 1.5px solid var(--border);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  box-shadow: var(--card-shadow);
+  backdrop-filter: blur(12px);
+}
+
+.works .section__heading p {
+  color: var(--muted);
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.video-card {
+  background: rgba(15, 15, 15, 0.75);
+  border-radius: var(--radius);
+  border: 1.5px solid var(--border);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(12px);
+  box-shadow: var(--card-shadow);
+}
+
+.video-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+}
+
+.video-card__meta {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.video-card__title {
+  margin: 0;
+  font-weight: 600;
+}
+
+.video-card__cta {
+  color: var(--accent-ice);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .contact {
@@ -584,6 +716,25 @@ main {
   font-size: 1.2rem;
 }
 
+.floating-cta {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  background: rgba(5, 5, 5, 0.8);
+  backdrop-filter: blur(14px);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.55);
+  z-index: 15;
+}
+
 .cookie-banner {
   position: fixed;
   top: 50%;
@@ -622,10 +773,28 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+    gap: 0.5rem;
+  }
+
+  .site-header nav {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
   }
 
   .site-header nav ul {
     flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-cta {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 
   .header-cta {
