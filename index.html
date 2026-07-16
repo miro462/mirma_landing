@@ -2,56 +2,67 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b0b0a" />
     <title>mirma.wav · Producción, grabación, mezcla y mastering</title>
-    <meta
-      name="description"
-      content="Estudio boutique de producción musical, grabación vocal, mezcla y mastering. Convierte tu idea en una canción lista para publicar."
-    />
+    <meta name="description" content="Estudio boutique de producción musical, grabación vocal, mezcla y mastering. Convierte tu idea en una canción lista para publicar." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
     <link rel="icon" href="images/favicon.png" type="image/png" />
   </head>
 
   <body>
-    <header class="site-header">
-      <a class="brand" href="#inicio" aria-label="mirma.wav, volver al inicio">mirma<span>.wav</span></a>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-      <nav aria-label="Navegación principal">
+    <header class="site-header navbar navbar-dark">
+      <a class="brand navbar-brand" href="#inicio" aria-label="mirma.wav, volver al inicio">mirma<span>.wav</span></a>
+
+      <nav class="desktop-nav" aria-label="Navegación principal">
         <a href="#servicios">Servicios</a>
         <a href="#proceso">Proceso</a>
         <a href="#estudio">Estudio</a>
       </nav>
 
-      <a class="header-cta" href="https://studio.mirma.me" target="_blank" rel="noreferrer">Acceso estudio</a>
+      <a class="header-cta d-none d-md-inline-flex" href="https://studio.mirma.me" target="_blank" rel="noreferrer">Acceso estudio</a>
+
+      <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Abrir navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
     </header>
+
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+      <div class="offcanvas-header">
+        <p class="offcanvas-title brand mb-0" id="mobileMenuLabel">mirma<span>.wav</span></p>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column">
+        <nav class="mobile-nav" aria-label="Navegación móvil">
+          <a href="#servicios" data-bs-dismiss="offcanvas">Servicios <span>01</span></a>
+          <a href="#proceso" data-bs-dismiss="offcanvas">Proceso <span>02</span></a>
+          <a href="#estudio" data-bs-dismiss="offcanvas">Estudio <span>03</span></a>
+          <a href="#contacto" data-bs-dismiss="offcanvas">Contacto <span>04</span></a>
+        </nav>
+        <a class="btn btn--primary mt-auto w-100" href="https://studio.mirma.me" target="_blank" rel="noreferrer">Acceso al estudio</a>
+      </div>
+    </div>
 
     <main id="inicio">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero__visual" role="img" aria-label="Estudio de producción musical mirma.wav"></div>
-
-        <div class="hero__content">
+        <div class="hero__content" id="contenido">
           <p class="eyebrow">Estudio de música · Mallorca / Online</p>
           <h1 id="hero-title">Haz que tu canción suene como la imaginaste.</h1>
-          <p class="hero__lead">
-            Producción, grabación, mezcla y mastering con dirección cercana, criterio técnico y un objetivo claro:
-            terminar música que quieras enseñar.
-          </p>
-
+          <p class="hero__lead">Producción, grabación, mezcla y mastering con dirección cercana, criterio técnico y un objetivo claro: terminar música que quieras enseñar.</p>
           <div class="hero__actions">
-            <a class="btn btn--primary" href="https://instagram.com/mirma.wav" target="_blank" rel="noreferrer">
-              Reservar una sesión
-            </a>
+            <a class="btn btn--primary" href="https://instagram.com/mirma.wav" target="_blank" rel="noreferrer">Reservar una sesión</a>
             <a class="btn btn--text" href="#servicios">Explorar servicios <span aria-hidden="true">↘</span></a>
           </div>
-
           <div class="hero__note">
             <span>Agenda abierta</span>
             <p>Sesiones presenciales y proyectos online.</p>
@@ -60,133 +71,55 @@
       </section>
 
       <section class="service-strip" aria-label="Servicios principales">
-        <span>Producción</span>
-        <span>Grabación</span>
-        <span>Mezcla</span>
-        <span>Mastering</span>
+        <span>Producción</span><span>Grabación</span><span>Mezcla</span><span>Mastering</span>
       </section>
 
       <section id="servicios" class="section services">
         <div class="section__intro">
           <p class="eyebrow">Servicios</p>
           <h2>De la primera idea al máster final.</h2>
-          <p>
-            Puedes entrar en cualquier punto del proceso. Construimos el servicio alrededor de la canción, no al revés.
-          </p>
+          <p>Puedes entrar en cualquier punto del proceso. Construimos el servicio alrededor de la canción, no al revés.</p>
         </div>
-
         <div class="service-list">
-          <article class="service">
-            <span class="service__number">01</span>
-            <div>
-              <h3>Producción musical</h3>
-              <p>Beatmaking, arreglos y dirección creativa para convertir una referencia, una letra o una maqueta en una canción completa.</p>
-            </div>
-            <span class="service__tag">Idea → Canción</span>
-          </article>
-
-          <article class="service">
-            <span class="service__number">02</span>
-            <div>
-              <h3>Grabación</h3>
-              <p>Sesiones vocales e instrumentales cuidadas, con acompañamiento durante la interpretación y atención al detalle desde la toma.</p>
-            </div>
-            <span class="service__tag">Presencial</span>
-          </article>
-
-          <article class="service">
-            <span class="service__number">03</span>
-            <div>
-              <h3>Mezcla</h3>
-              <p>Profundidad, claridad e intención. Cada elemento encuentra su sitio sin borrar la personalidad de la producción.</p>
-            </div>
-            <span class="service__tag">Presencial / Online</span>
-          </article>
-
-          <article class="service">
-            <span class="service__number">04</span>
-            <div>
-              <h3>Mastering</h3>
-              <p>El último ajuste de balance, impacto y traducción para que el tema llegue preparado a plataformas, vídeo o formato físico.</p>
-            </div>
-            <span class="service__tag">Entrega final</span>
-          </article>
+          <article class="service"><span class="service__number">01</span><div><h3>Producción musical</h3><p>Beatmaking, arreglos y dirección creativa para convertir una referencia, una letra o una maqueta en una canción completa.</p></div><span class="service__tag">Idea → Canción</span></article>
+          <article class="service"><span class="service__number">02</span><div><h3>Grabación</h3><p>Sesiones vocales e instrumentales cuidadas, con acompañamiento durante la interpretación y atención al detalle desde la toma.</p></div><span class="service__tag">Presencial</span></article>
+          <article class="service"><span class="service__number">03</span><div><h3>Mezcla</h3><p>Profundidad, claridad e intención. Cada elemento encuentra su sitio sin borrar la personalidad de la producción.</p></div><span class="service__tag">Presencial / Online</span></article>
+          <article class="service"><span class="service__number">04</span><div><h3>Mastering</h3><p>El último ajuste de balance, impacto y traducción para que el tema llegue preparado a plataformas, vídeo o formato físico.</p></div><span class="service__tag">Entrega final</span></article>
         </div>
       </section>
 
       <section id="proceso" class="section process">
-        <div class="section__intro">
-          <p class="eyebrow">Cómo trabajamos</p>
-          <h2>Un proceso simple. Sin humo, sin perder semanas.</h2>
-        </div>
-
+        <div class="section__intro"><p class="eyebrow">Cómo trabajamos</p><h2>Un proceso simple. Sin humo, sin perder semanas.</h2></div>
         <div class="process-grid">
-          <article>
-            <span>01</span>
-            <h3>Escuchamos</h3>
-            <p>Nos cuentas qué buscas y escuchamos tu material, referencias y punto de partida.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Construimos</h3>
-            <p>Trabajamos la canción contigo, tomando decisiones que sumen emoción y coherencia.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Terminamos</h3>
-            <p>Revisamos, entregamos los formatos necesarios y dejamos el proyecto listo para salir.</p>
-          </article>
+          <article><span>01</span><h3>Escuchamos</h3><p>Nos cuentas qué buscas y escuchamos tu material, referencias y punto de partida.</p></article>
+          <article><span>02</span><h3>Construimos</h3><p>Trabajamos la canción contigo, tomando decisiones que sumen emoción y coherencia.</p></article>
+          <article><span>03</span><h3>Terminamos</h3><p>Revisamos, entregamos los formatos necesarios y dejamos el proyecto listo para salir.</p></article>
         </div>
       </section>
 
       <section id="estudio" class="section studio">
-        <div class="studio__heading">
-          <div>
-            <p class="eyebrow">El espacio</p>
-            <h2>Un estudio hecho para concentrarse en la música.</h2>
-          </div>
-          <p>
-            Un entorno íntimo, tratado y sin distracciones. La tecnología está ahí, pero la protagonista sigue siendo la canción.
-          </p>
-        </div>
-
+        <div class="studio__heading"><div><p class="eyebrow">El espacio</p><h2>Un estudio hecho para concentrarse en la música.</h2></div><p>Un entorno íntimo, tratado y sin distracciones. La tecnología está ahí, pero la protagonista sigue siendo la canción.</p></div>
         <div class="gallery">
-          <figure class="gallery__primary">
-            <img src="images/imagen1.webp" alt="Zona de producción y mezcla del estudio mirma.wav" />
-          </figure>
-          <figure>
-            <img src="images/imagen2.webp" alt="Cabina de grabación del estudio mirma.wav" />
-          </figure>
+          <figure class="gallery__primary"><img src="images/imagen1.webp" alt="Zona de producción y mezcla del estudio mirma.wav" loading="lazy" decoding="async" /></figure>
+          <figure><img src="images/imagen2.webp" alt="Cabina de grabación del estudio mirma.wav" loading="lazy" decoding="async" /></figure>
         </div>
       </section>
 
       <section id="contacto" class="contact">
-        <p class="eyebrow">Empezamos por escuchar</p>
-        <h2>Cuéntanos qué estás creando.</h2>
-        <p>Envíanos tu idea, maqueta o referencias. Te responderemos con el siguiente paso más útil para el proyecto.</p>
-        <div class="contact__actions">
-          <a class="btn btn--light" href="https://instagram.com/mirma.wav" target="_blank" rel="noreferrer">Hablar por Instagram</a>
-          <a class="btn btn--outline" href="https://studio.mirma.me" target="_blank" rel="noreferrer">Entrar al estudio</a>
-        </div>
+        <p class="eyebrow">Empezamos por escuchar</p><h2>Cuéntanos qué estás creando.</h2><p>Envíanos tu idea, maqueta o referencias. Te responderemos con el siguiente paso más útil para el proyecto.</p>
+        <div class="contact__actions"><a class="btn btn--light" href="https://instagram.com/mirma.wav" target="_blank" rel="noreferrer">Hablar por Instagram</a><a class="btn btn--outline" href="https://studio.mirma.me" target="_blank" rel="noreferrer">Entrar al estudio</a></div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <a class="brand" href="#inicio">mirma<span>.wav</span></a>
-      <p>Producción · Grabación · Mezcla · Mastering</p>
-      <div class="socials" aria-label="Redes sociales">
-        <a href="https://instagram.com/mirma.wav" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@mirma.wav" target="_blank" rel="noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        <a href="https://www.youtube.com" target="_blank" rel="noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      </div>
+      <a class="brand" href="#inicio">mirma<span>.wav</span></a><p>Producción · Grabación · Mezcla · Mastering</p>
+      <div class="socials" aria-label="Redes sociales"><a href="https://instagram.com/mirma.wav" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="https://www.tiktok.com/@mirma.wav" target="_blank" rel="noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a><a href="https://www.youtube.com" target="_blank" rel="noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></div>
       <small>&copy; 2026 mirma.wav</small>
     </footer>
 
-    <div id="cookie-banner" class="cookie-banner hidden">
-      <p>Usamos cookies esenciales para mejorar tu experiencia. Consulta nuestra <a href="#">política</a>.</p>
-      <button id="accept-cookies" class="cookie-button">Aceptar</button>
-    </div>
+    <div id="cookie-banner" class="cookie-banner hidden"><p>Usamos cookies esenciales para mejorar tu experiencia. Consulta nuestra <a href="#">política</a>.</p><button id="accept-cookies" class="cookie-button">Aceptar</button></div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script src="js/cookies.js" defer></script>
   </body>
 </html>
